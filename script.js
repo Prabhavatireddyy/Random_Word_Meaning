@@ -16,10 +16,20 @@ function fetchWordMeaning() {
       wordElement.textContent = word;
       return fetch(dictionaryAPI + word);
     })
-    .then(response => response.json())
+    .then(response => {
+      const res = response.json();
+      return res;
+    })
     .then(data => {
+      // console.log('data ', data);
+      if(data.title == 'No Definitions Found'){
+        // fetchWordMeaning();
+        meaningElement.textContent = 'Meaning not Found';
+      }
+      else{
       const meaning = data[0].meanings[0].definitions[0].definition;
       meaningElement.textContent = meaning;
+      }
     })
     .catch(error => console.error(error));
 
