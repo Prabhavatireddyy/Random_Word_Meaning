@@ -15,19 +15,24 @@ body {
 }
 
 h1 {
-  transform: translate(1rem, 10rem);
-  font-size: 50px;
-  height: 5cm;
+  transform: translate(1rem, 5rem);
+  font-size: 60px;
+  color:rgb(0, 0, 0);
+}
+
+h2 {
+  transform: translate(1rem, 3rem);
+  font-size: 55px;
   width: 20cm;
+  color:rgb(255, 255, 255);
   text-align: center;
+  -webkit-text-stroke: 0.3px black;
 }
 
 p {
   font-size: 30px;
   background: lavenderblush;
   padding: 20px;
-  height: -30cm;
-  width: -8cm;
   text-align: center;
   box-shadow: 0 0 4px #2c2b31, 0 0 8px #3a2999, 0 0 12px #220ba2;
   border-radius: 25px;
